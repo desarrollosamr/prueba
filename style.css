@@ -1,0 +1,48 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+body { font-size: 28px;}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1.6fr 0.3fr 1.6fr 0.3fr 1.6fr 0.3fr 1.6fr 0.3fr 1.6fr 0.3fr 1.5fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  gap: 5px 0px;
+  grid-template-areas:
+    ". . . . . . . . . . ."
+    "centenas coma1 decenas coma2 unidades coma3 decimas coma4 centesimas coma5 milesimas"
+    ". . . . . . . . . . .";
+}
+
+.d1 { grid-area: centenas; text-align: right;}
+
+.c1 { grid-area: coma1; text-align: right;}
+
+.d2 { grid-area: decenas; text-align: right; }
+
+.c2 { grid-area: coma2; text-align: right;}
+
+.d3 { grid-area: unidades; text-align: right; }
+
+.c3 { grid-area: coma3; text-align: right;}
+
+.d4 { grid-area: decimas; text-align: right; }
+
+.c4 { grid-area: coma4; text-align: right;}
+
+.d5 { grid-area: centesimas; text-align: right; }
+
+.c5 { grid-area: coma5; text-align: right;}
+
+.d6 { grid-area: milesimas; text-align: right; }
+
+
+/* For presentation only, no need to copy the code below */
+.grid-container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.grid-container *:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
